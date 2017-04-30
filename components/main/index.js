@@ -4,9 +4,10 @@ import { View, Text } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
+import { configureStore } from '../../redux';
 import Tweet from '../tweet';
 
-const store = createStore(() => {});
+const store = configureStore();
 
 export default Main = () => {
     return (
