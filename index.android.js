@@ -12,8 +12,6 @@ import {
   View
 } from 'react-native';
 
-import TweetstormRN from './components/main';
+import Main from './components/main';
 
-export default TweetstormRN;
-
-AppRegistry.registerComponent('TweetstormRN', () => TweetstormRN);
+AppRegistry.registerComponent('TweetstormRN', () => Main);
