@@ -18,6 +18,7 @@ class Tweet extends Component {
   }
 
   render() {
+    console.log('(Tweet) props', this.props);
     const { tweet, updateTweet } = this.props;
     return (
       <ScrollView
