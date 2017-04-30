@@ -11,8 +11,7 @@ import Tweet from '../tweet';
 class TweetScreen extends React.Component {
   render() {
     console.log('TweetScreen', this.props);
-    // return <Tweet />;
-    return <Text>Tweet</Text>
+    return <Tweet />;
   }
 }
 
@@ -23,8 +22,12 @@ class AllContactsScreen extends React.Component {
 }
 
 const HomeScreen = TabNavigator({
-  Tweet: { screen: TweetScreen },
-  All: { screen: AllContactsScreen },
+  Tweet: {
+    screen: TweetScreen
+  },
+  All: {
+    screen: AllContactsScreen
+  },
 });
 
 export default HomeScreen;
