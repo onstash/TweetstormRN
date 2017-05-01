@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import AllContacts from '../../all-contacts';
+import TweetStorm from '../../tweet-storm';
 
 export default class extends Component {
   static navigationOptions = {
-    title: 'All'
+    title: 'TweetStorm'
   };
   render() {
-    return <AllContacts />;
+    return <TweetStorm />;
   }
 }

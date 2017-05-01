@@ -13,8 +13,6 @@ export default class extends Component {
         navigate
       }
     } = this.props;
-    console.log('LoginWrapper props', this.props);
-    console.log('LoginWrapper navigate', navigate);
     const goHome = () => navigate.call(this, constants.HOME);
     return (
       <Login

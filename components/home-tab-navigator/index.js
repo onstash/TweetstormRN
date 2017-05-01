@@ -1,12 +1,9 @@
 import React from 'react';
 
 import { TabNavigator } from 'react-navigation';
-import {
-  forFadeFromBottomAndroid as SlideFromRight
-} from 'react-navigation/lib/views/CardStackStyleInterpolator';
 
 import Tweet from './navigation-wrappers/tweet';
-import AllContacts from './navigation-wrappers/all-contacts';
+import TweetStorm from './navigation-wrappers/tweet-storm';
 
 const screenProps = {
   navigate(route) {
@@ -17,18 +14,12 @@ const screenProps = {
   }
 };
 
-const transitionConfig = () => {
-  return {
-    screenInterpolator: SlideFromRight
-  };
-};
-
 const RoutesConfig = {
   Tweet: {
     screen: Tweet
   },
-  All: {
-    screen: AllContacts
+  TweetStorm: {
+    screen: TweetStorm
   }
 };
 
@@ -52,7 +43,6 @@ const HomeTabNavigator = props => {
   return (
     <_HomeTabNavigator
       screenProps={ screenProps }
-      transitionConfig={ transitionConfig }
     />
   );
 };

@@ -6,13 +6,14 @@ import { createStore } from 'redux';
 
 import { configureStore } from '../../redux';
 import Login from '../login';
+import AppStackNavigator from '../app-stack-navigator';
 
 const store = configureStore();
 
 export default Main = () => {
     return (
         <Provider store={ store }>
-            <Login />
+            <AppStackNavigator />
         </Provider>
     );
 }

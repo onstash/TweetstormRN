@@ -1,4 +1,4 @@
 export default {
   TWEET: 'Tweet',
-  All: 'All'
+  TWEET_STORM: 'TweetStorm'
 };
