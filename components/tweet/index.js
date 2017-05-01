@@ -11,6 +11,7 @@ import {
 
 import { actions } from '../../redux';
 import styles from './styles';
+import generateTweetStorm from '../../utils/tweet-storm';
 
 class Tweet extends Component {
   shouldComponentUpdate(newProps) {
@@ -18,7 +19,6 @@ class Tweet extends Component {
   }
 
   render() {
-    console.log('(Tweet) props', this.props);
     const { tweet, updateTweet } = this.props;
     return (
       <ScrollView
@@ -43,6 +43,9 @@ const mapStateToProps = ({ tweet }) => ({ tweet });
 const mapDispatchToProps = dispatch => ({
   updateTweet: tweet => {
     dispatch(actions.tweet.set(tweet));
+    const tweetStormTweets = generateTweetStorm(tweet);
+    console.log('tweetStormTweets', tweetStormTweets);
+    dispatch(actions.tweetStorm.set(tweetStormTweets));
   }
 })
 

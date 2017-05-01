@@ -11,10 +11,7 @@ export default StyleSheet.create({
     margin: 15,
     elevation: 1
   },
-  inputContainer: {
-    marginTop: 15,
-    paddingLeft:10,
-    paddingRight:10,
-    backgroundColor: 'green',
+  errorText: {
+    justifyContent: 'center'
   }
 });

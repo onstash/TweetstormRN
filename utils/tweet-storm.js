@@ -1,0 +1,33 @@
+const sentencePattern = new RegExp(/([.?!])\s*(?=[A-Z])/g);
+const sentenceSplitter = text => {
+  return text.replace(sentencePattern, "$1|").split("|");
+};
+
+const generateTweetStorm = tweet => {
+  const tweets = [];
+  const sentences = sentenceSplitter(tweet);
+  sentences.map(sentence => {
+    const sentenceLength = sentence.length;
+    if (sentenceLength < 134) {
+      const lastSentence = tweets[tweets.length - 1];
+      if (lastSentence) {
+        if (lastSentence.length + sentenceLength < 134) {
+          const newSentence = `${lastSentence} ${sentence}`;
+          tweets[tweets.length - 1] = newSentence;
+        } else {
+          tweets.push(sentence);
+        }
+      } else {
+        tweets.push(sentence);
+      }
+    } else {
+      const _sentences = sentence.split(/[\s\S]{1, 70}/g);
+      _sentences.map(_sentence => {
+        tweets.push(_sentence);
+      });
+    }
+  });
+  return tweets;
+};
+
+export default generateTweetStorm;
