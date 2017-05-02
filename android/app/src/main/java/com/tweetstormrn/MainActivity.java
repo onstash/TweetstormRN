@@ -1,6 +1,7 @@
 package com.tweetstormrn;
-
+import android.content.Intent;
 import com.facebook.react.ReactActivity;
+import com.tkporter.fabrictwitterkit.FabricTwitterKitPackage;
 
 public class MainActivity extends ReactActivity {
 
@@ -11,5 +12,12 @@ public class MainActivity extends ReactActivity {
     @Override
     protected String getMainComponentName() {
         return "TweetstormRN";
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        FabricTwitterKitPackage.getInstance()
+            .onActivityResult(this, requestCode, resultCode, data);
     }
 }
