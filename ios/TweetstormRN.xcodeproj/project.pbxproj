@@ -47,6 +47,7 @@
 		73A619707F414F02874083A2 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B79DF8DBE8684630BC5D7DE5 /* Octicons.ttf */; };
 		D550048ACA0445DCB3133A64 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FD4933DD1004C479A15B978 /* SimpleLineIcons.ttf */; };
 		5F908ADCF1754B6CB9367AD4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7682D9E3A24941AB9C8698C1 /* Zocial.ttf */; };
+		1F3BF2EF18364E04BBB6A8A6 /* libFabricTwitterKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B460676FE64B1CA110B479 /* libFabricTwitterKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,6 +281,8 @@
 		B79DF8DBE8684630BC5D7DE5 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1FD4933DD1004C479A15B978 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7682D9E3A24941AB9C8698C1 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12D5683C87954DDBA92B593E /* FabricTwitterKit.xcodeproj */ = {isa = PBXFileReference; name = "FabricTwitterKit.xcodeproj"; path = "../node_modules/react-native-fabric-twitterkit/FabricTwitterKit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		12B460676FE64B1CA110B479 /* libFabricTwitterKit.a */ = {isa = PBXFileReference; name = "libFabricTwitterKit.a"; path = "libFabricTwitterKit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +311,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				B9C9B63457664B729E8B80F8 /* libAutoGrowTextInput.a in Frameworks */,
 				D53B4703D4C9490D94912693 /* libRNVectorIcons.a in Frameworks */,
+				1F3BF2EF18364E04BBB6A8A6 /* libFabricTwitterKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +480,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				7B1343DFD60A45D6874BC664 /* AutoGrowTextInput.xcodeproj */,
 				11C91100F33E47DA954D707E /* RNVectorIcons.xcodeproj */,
+				12D5683C87954DDBA92B593E /* FabricTwitterKit.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1032,11 +1037,13 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TweetstormRN.app/TweetstormRN";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-autogrow-textinput/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-fabric-twitterkit/FabricTwitterKit",
 				);
 			};
 			name = Debug;
@@ -1057,11 +1064,13 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TweetstormRN.app/TweetstormRN";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-autogrow-textinput/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-fabric-twitterkit/FabricTwitterKit",
 				);
 			};
 			name = Release;
@@ -1085,6 +1094,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-autogrow-textinput/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-fabric-twitterkit/FabricTwitterKit",
 				);
 			};
 			name = Debug;
@@ -1107,6 +1117,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-autogrow-textinput/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-fabric-twitterkit/FabricTwitterKit",
 				);
 			};
 			name = Release;
@@ -1136,11 +1147,13 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-autogrow-textinput/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-fabric-twitterkit/FabricTwitterKit",
 				);
 			};
 			name = Debug;
@@ -1170,11 +1183,13 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-autogrow-textinput/ios",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+					"$(SRCROOT)/../node_modules/react-native-fabric-twitterkit/FabricTwitterKit",
 				);
 			};
 			name = Release;
@@ -1199,6 +1214,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1223,6 +1239,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Release;
