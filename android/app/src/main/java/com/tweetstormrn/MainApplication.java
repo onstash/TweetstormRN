@@ -15,11 +15,12 @@ import io.fabric.sdk.android.Fabric;
 
 import java.util.Arrays;
 import java.util.List;
+import android.content.res.Resources;
 
 public class MainApplication extends Application implements ReactApplication {
   // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
-  private static final String TWITTER_KEY = "vjghc2HBU5Q1EZsdRKkc6JjHy";
-  private static final String TWITTER_SECRET = "6hf3cG5mBtxf4GKYFGmfDsnEagrKY4FuapyWYy9oIwwA5fGr4a";
+  private static final String TWITTER_KEY = Resources.getSystem().getString(R.string.twitter_api_key);
+  private static final String TWITTER_SECRET = Resources.getSystem().getString(R.string.twitter_api_secret);
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
