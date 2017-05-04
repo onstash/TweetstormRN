@@ -9,12 +9,18 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.twitter.sdk.android.Twitter;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import io.fabric.sdk.android.Fabric;
 
 import java.util.Arrays;
 import java.util.List;
+import android.content.res.Resources;
 
 public class MainApplication extends Application implements ReactApplication {
-
+  // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+  private static final String TWITTER_KEY = Resources.getSystem().getString(R.string.twitter_api_key);
+  private static final String TWITTER_SECRET = Resources.getSystem().getString(R.string.twitter_api_secret);
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
@@ -40,5 +46,7 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+      Fabric.with(this, new Twitter(authConfig));
   }
 }
